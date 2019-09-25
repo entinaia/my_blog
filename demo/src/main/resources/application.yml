@@ -1,0 +1,29 @@
+spring:
+  profiles: default
+  http:
+    log-request-details: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+    
+server:
+  port: 8090
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+    context-path: /MY-BLOG
+    
+    
+
+logging:
+  path: logs
+  level: 
+    org:
+      springframework:
+        web: DEBUG
